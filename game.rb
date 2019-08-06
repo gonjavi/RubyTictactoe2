@@ -1,20 +1,20 @@
 class Game
-    board = Board.new
-    player=Player.new 
-
+    
     def initialize
+        @board_o=0
+        @board_x=0
+        @b=0
 
     end
     def play
         @play_game = true
         while @play_game
-            puts
-             puts "Tic Tac Toe"          
-            board.show_board
+            puts "Tic Tac Toe"          
+            show_board
             check_win
             check_draw
             turn
-            player.change_player
+            change_player
         end
       
     end 
@@ -25,19 +25,18 @@ class Game
     end
     
     def check_win 
-        @board_x=0 
-        @board_o=0 
+ 
         #checking each position in the array x inside winnig positions
-        @win_positions.each do |x|
-            x.each do |y|
-                    if @board[y]=="o"
+        @win_positions.each do |row|
+            row.each do |cell|
+                    if @board[cell]=="o"
                         @board_o +=1
                         if  @board_o==3
                             puts "the winner is player o"
                             end_game
                         end
 
-                    elsif @board[y]=="x"
+                    elsif @board[cell]=="x"
                           
                         @board_x+=1
                         if  @board_x==3
@@ -89,4 +88,4 @@ class Game
 end
 
 game=Game.new
-game.play
+game.end_game
