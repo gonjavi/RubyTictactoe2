@@ -4,12 +4,15 @@ class Game
         @board_o=0
         @board_x=0
         @b=0
+        @win_positions =
+      [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
 
     end
     def play
         @play_game = true
         while @play_game
-            puts "Tic Tac Toe"          
+            
+             puts "Tic Tac Toe"          
             show_board
             check_win
             check_draw
@@ -19,10 +22,7 @@ class Game
       
     end 
     
-    def end_game        
-        puts "The game has finished!!"
-        exit
-    end
+   
     
     def check_win 
  
@@ -85,7 +85,22 @@ class Game
             @board[@b]="o"
         end
       end
+      def check_draw
+        z=0
+            @board.each do |x|
+                if x!="-"
+                    z+=1
+                end
+                if z==9
+                    puts "the game is a draw"
+                    end_game
+                end
+
+            end
+        end
+        def end_game        
+            puts "The game has finished!!"
+            exit
+        end
 end
 
-game=Game.new
-game.end_game
