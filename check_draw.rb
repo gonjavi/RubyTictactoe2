@@ -8,7 +8,7 @@ class Check_draw
                 end
                 if z==9
                     puts "the game is a draw"
-                    
+                    exit
                 end
 
             end
