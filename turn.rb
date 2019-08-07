@@ -38,24 +38,4 @@ class Turn
     end
 
 
-
-      #board parameter is an array with the positions to be checked
-    def check_board(board,b)
-            b=b.to_i
-         b-=1
-         if board[b] != "-"          
-            puts "the number has been selected choose another number"
-            turn
-         end
-    end
-
-    def put_on_board
-        if player=="x"
-            board[b]="x"
-
-        elsif player=="o"
-            board[b]="o"
-        end
-    end
-
 end
