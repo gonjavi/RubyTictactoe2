@@ -27,7 +27,8 @@
                         @board_x+=1
                         if  @board_x==3
                             puts "the winner is player x"
-                        
+                            puts "The game has finished!!"
+                            exit
                         end
                     end
             end
