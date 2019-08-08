@@ -3,13 +3,13 @@ class Board
 
     def initialize
         
-        @board = ["-", "-", "-", "-", "-", "-", "-", "-", "-"]
+        board = ["-", "-", "-", "-", "-", "-", "-", "-", "-"]
     end
 
-    def show_board
-        puts @board[0..2].join(" ")
-        puts @board[3..5].join(" ")  
-        puts @board[6..8].join(" ") 
+    def show_board(board)
+        puts board[0..2].join(" ")
+        puts board[3..5].join(" ")  
+        puts board[6..8].join(" ") 
     end
 end
 
