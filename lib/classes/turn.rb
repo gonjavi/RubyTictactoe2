@@ -1,9 +1,9 @@
 class Turn
     attr_accessor :b, :board, :player
-    def initialize(board=["-", "-", "-", "-", "-", "-", "-", "-", "-"] ,player)
+    def initialize
         b=0
-        @board=board
-        player=player
+        board=["-", "-", "-", "-", "-", "-", "-", "-", "-"]
+        player
     end
     def turn(board,player)
         state=true
@@ -16,7 +16,7 @@ class Turn
                     b=b.to_i
                     b-=1
                     state=false
-                    if @board[b] != "-"          
+                    if board[b] != "-"          
                         puts "the number has been selected choose another number"
                         state=true
                     end
@@ -29,12 +29,12 @@ class Turn
         end  
          #put on board
          if player=="x"
-            @board[b]="x"
+            board[b]="x"
 
          elsif player=="o"
-           @board[b]="o"
+           board[b]="o"
          end
-           return @board
+           return board
     end
 
 
