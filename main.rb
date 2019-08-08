@@ -12,7 +12,7 @@ turn=Turn.new(board.board,player)
         puts "Tic Tac Toe"
 
         board.show_board
-        board=board.board
+       
         check_win.check_win(board)
 
         check_draw.check_draw(board)
