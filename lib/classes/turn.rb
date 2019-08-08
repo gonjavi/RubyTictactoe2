@@ -22,7 +22,7 @@ class Turn
                     end
              else
                 puts "Please input a numerical position (1-9)"
-              
+                state=true
              end
              
             
