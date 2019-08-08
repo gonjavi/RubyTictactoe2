@@ -10,6 +10,7 @@ class Board
         puts board[0..2].join(" ")
         puts board[3..5].join(" ")  
         puts board[6..8].join(" ") 
+        return board
     end
 end
 
