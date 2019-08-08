@@ -19,7 +19,8 @@
                        @board_o +=1
                         if  @board_o==3
                             puts "the winner is player o"
-                            
+                            puts "The game has finished!!"
+                            exit
                         end
 
                     elsif board[cell]=="x"
