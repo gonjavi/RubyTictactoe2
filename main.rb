@@ -11,13 +11,13 @@ turn=Turn.new(board.board,player)
 #while @play_game
         puts "Tic Tac Toe"
 
-        board.show_board
+        b=board.show_board
        
-        check_win.check_win(board)
+        check_win.check_win(b)
 
-        check_draw.check_draw(board)
+        check_draw.check_draw(b)
 
-        board=turn.turn(board,player)
+        b=turn.turn(b,player)
         #urn.check_board
         #turn.put_on_board
         player.change_player
