@@ -4,21 +4,21 @@ check_win=Check_win.new
 check_draw=Check_draw.new
 
 player=Player.new
-turn=Turn.new(board.board,player)
-
-
+turn=Turn.new
+b=["-", "-", "-", "-", "-", "-", "-", "-", "-"]
+pl="x"
 @play_game = true
-#while @play_game
+while @play_game
         puts "Tic Tac Toe"
 
-        b=board.show_board
+        b=board.show_board(b)
        
         check_win.check_win(b)
 
         check_draw.check_draw(b)
 
-        b=turn.turn(b,player)
-        #urn.check_board
-        #turn.put_on_board
-        player.change_player
-#end
+        b=turn.turn(b,pl)
+        
+      
+        pl= player.change_player
+end
