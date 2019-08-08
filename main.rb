@@ -6,7 +6,10 @@ check_draw=Check_draw.new
 player=Player.new
 turn=Turn.new
 b=["-", "-", "-", "-", "-", "-", "-", "-", "-"]
+#star player x
 pl="x"
+
+
 @play_game = true
 while @play_game
         puts "Tic Tac Toe"
