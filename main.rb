@@ -19,9 +19,13 @@ while @play_game
        if check_win.check_win(b)
                 pl= player.change_player
                 puts "The winner is player #{pl}"
+                exit
        end
 
-        check_draw.check_draw(b)
+        if check_draw.check_draw(b)
+                puts "The game es draw"
+                exit
+        end
 
         b=turn.turn(b,pl)
         
