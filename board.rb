@@ -1,9 +1,8 @@
 class Board
-    attr_accessor :board
+    attr_reader :board
 
     def initialize
-        
-        board = ["-", "-", "-", "-", "-", "-", "-", "-", "-"]
+        @board = ["-", "-", "-", "-", "-", "-", "-", "-", "-"]
     end
 
     def show_board(board=["-", "-", "-", "-", "-", "-", "-", "-", "-"])
