@@ -30,7 +30,7 @@ while @play_game
         #@b recibe x o o y check board mira si no ha sido ocupada
             puts "choose the number for the position"
             a=gets.chomp
-            if  a =~ /\d/
+            if  a =~ /^\d+$/
                     #continue to check board
                     a=a.to_i
                     a-=1
