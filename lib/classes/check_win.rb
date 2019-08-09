@@ -11,7 +11,7 @@
     
     #parameter board is an array, bringing the positions played on the board
     def check_win(board)
- 
+        win=false
         #checking each position in the array x inside winnig positions
         @win_positions.each do |row|
             row.each do |cell|
@@ -20,8 +20,8 @@
                         if  @board_o==3
                             #puts "the winner is player o"
                             #puts "The game has finished!!"
-                            #exit
-                            return true
+                            win=true
+                            
                         end
 
                     elsif board[cell]=="x"
@@ -31,7 +31,7 @@
                             #puts "the winner is player x"
                             #puts "The game has finished!!"
                             #exit
-                            return true
+                            win=true
                         end
                     end
             end
@@ -40,7 +40,7 @@
                 
             
         end
-
+        return win
     end
 
 end
