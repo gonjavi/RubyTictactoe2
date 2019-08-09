@@ -21,7 +21,7 @@
                             #puts "the winner is player o"
                             #puts "The game has finished!!"
                             #exit
-                            return "The winner is player o"
+                            return true
                         end
 
                     elsif board[cell]=="x"
@@ -31,7 +31,7 @@
                             #puts "the winner is player x"
                             #puts "The game has finished!!"
                             #exit
-                            return "The winner is player x"
+                            return true
                         end
                     end
             end
