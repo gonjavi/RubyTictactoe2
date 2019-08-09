@@ -16,7 +16,10 @@ while @play_game
 
         b=board.show_board(b)
        
-        check_win.check_win(b)
+       if check_win.check_win(b)
+               
+                puts "The winner is player #{pl}"
+       end
 
         check_draw.check_draw(b)
 
